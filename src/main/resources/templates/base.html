@@ -1,8 +1,26 @@
-<div th:fragment="parent(content)">
-    <div th:insert="${content}">
-        <h1>This is parent fragment</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolorem facere ipsa modi molestiae odio odit quibusdam sequi similique?
-        </p>
-    </div>
-</div>
+<!doctype html>
+<html
+        th:fragment="parent(content, title, script)"
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-th-replace="${title}">Base Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" data-th-href="@{/css/output.css}" />
+</head>
+<body>
+
+<!--main content-->
+<section data-th-replace="${content}"></section>
+
+
+<!--flow bit content-->
+
+    why it didn't worked earlier
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+<th:block data-th-replace="${script}"></th:block>
+</body>
+</html>

@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Services</title>
+    <title>
+        Services
+    </title>
 </head>
 <body>
-
-<h1> This is the services page. </h1>
-<hr>
-<div th-replace="~{base :: parent( ~{ ::section} )}">
-    <section>
-        <h1>oh wow it is working now</h1>
+    <section id="content">
+        <h1>
+            Welcome to services page
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores ducimus in ipsa repellat. A adipisci aliquam, id ipsam molestiae omnis pariatur perspiciatis quidem ratione rem. Dolor eos fugit nostrum.
+        </p>
     </section>
-</div>
 </body>
 </html>

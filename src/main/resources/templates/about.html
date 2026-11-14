@@ -1,19 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <title>About</title>
+    <title>
+        About
+    </title>
 </head>
 <body>
-
-<!--using fragments-->
-    <h1> This is about page.</h1>
-    <hr>
-    <div class="host-tag" th:insert="~{base :: parent( ~{ ::section} )}">
-        <section>
-            <button>Submit</button>
-        </section>
-    </div>
-
+    <section id="content">
+        <h1>
+            Welcome to about page!
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium architecto autem cum doloremque error fugiat ipsum laborum libero nam, porro provident repudiandae ullam! Beatae dolore nostrum quae similique voluptate!
+        </p>
+    </section>
+<script>
+    console.log("logs for about page")
+</script>
+    <script>
+        console.log("just having fun ")
+    </script>
 </body>
 </html>

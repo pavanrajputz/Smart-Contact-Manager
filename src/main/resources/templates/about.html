@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+</head>
+<body>
+
+<!--using fragments-->
+    <h1> This is about page.</h1>
+    <hr>
+    <div class="host-tag" th:insert="~{base :: parent( ~{ ::section} )}">
+        <section>
+            <button>Submit</button>
+        </section>
+    </div>
+
+</body>
+</html>
